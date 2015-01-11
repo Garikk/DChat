@@ -1,0 +1,13 @@
+/# DZFS.net 2003
+/# DChat Project
+/# --------------------------------
+/# DChat Addon Manager
+/# --------------------------------
+/# Created by Garikk
+/# --------------------------------
+
+/# Загрузка плагинов
+/# Использование:
+/# /loadplugin [путь] [точка входа]
+
+/loadplugin addons\irc.dll IRC_DC_Client

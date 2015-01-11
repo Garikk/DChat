@@ -1,0 +1,4 @@
+/base printincon one
+/base printincon loadfile
+/exec 123.dcscript parametr showthis
+/base printincon continue

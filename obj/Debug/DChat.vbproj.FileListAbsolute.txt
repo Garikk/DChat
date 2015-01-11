@@ -1,0 +1,13 @@
+D:\SKYDRIVE\mydocs\programming\OLD_PROJECTS\DChat2\bin\DChat.exe.config
+D:\SKYDRIVE\mydocs\programming\OLD_PROJECTS\DChat2\obj\Debug\DChat.exe
+D:\SKYDRIVE\mydocs\programming\OLD_PROJECTS\DChat2\obj\Debug\DChat.xml
+D:\SKYDRIVE\mydocs\programming\OLD_PROJECTS\DChat2\obj\Debug\DChat.pdb
+D:\SKYDRIVE\mydocs\programming\OLD_PROJECTS\DChat2\bin\DChat.exe
+D:\SKYDRIVE\mydocs\programming\OLD_PROJECTS\DChat2\bin\DChat.pdb
+D:\SKYDRIVE\mydocs\programming\OLD_PROJECTS\DChat2\bin\DChat.xml
+D:\SKYDRIVE\mydocs\programming\OLD_PROJECTS\DChat2\bin\UNI_Plugin.dll
+D:\SKYDRIVE\mydocs\programming\OLD_PROJECTS\DChat2\obj\Debug\DChat.vbprojResolveAssemblyReference.cache
+D:\SKYDRIVE\mydocs\programming\OLD_PROJECTS\DChat2\obj\Debug\DChat2.frmAbout.resources
+D:\SKYDRIVE\mydocs\programming\OLD_PROJECTS\DChat2\obj\Debug\DChat2.frmChat.resources
+D:\SKYDRIVE\mydocs\programming\OLD_PROJECTS\DChat2\obj\Debug\DChat2.frmSettings.resources
+D:\SKYDRIVE\mydocs\programming\OLD_PROJECTS\DChat2\obj\Debug\DChat.vbproj.GenerateResource.Cache

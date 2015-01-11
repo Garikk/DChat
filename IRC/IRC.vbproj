@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8AD0856D-B199-4AFB-8341-EC5371781880}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>IRC</AssemblyName>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>IRC</RootNamespace>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\Addons\</OutputPath>
+    <DocumentationFile>IRC.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>Full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\Addons\</OutputPath>
+    <DocumentationFile>IRC.xml</DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <NoWarn>42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="UNI_Plugin">
+      <Name>UNI_Plugin</Name>
+      <HintPath>..\bin\Addons\UNI_Plugin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmAddCHL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddFriend.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeMode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCHLInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFirstMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIRCColorEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMsg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUserInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfaceCTLS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfObjects.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IRChat.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IRC_Consts.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IRC_DCSE.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IRC_Declares.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IRC_Operation.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IRC_Process.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IRC_Settings.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="frmAddCHL.resx">
+      <DependentUpon>frmAddCHL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddFriend.resx">
+      <DependentUpon>frmAddFriend.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangeMode.resx">
+      <DependentUpon>frmChangeMode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCHLInfo.resx">
+      <DependentUpon>frmCHLInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFirstMaster.resx">
+      <DependentUpon>frmFirstMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIRCColorEditor.resx">
+      <DependentUpon>frmIRCColorEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsg.resX">
+      <DependentUpon>frmMsg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUserInfo.resx">
+      <DependentUpon>frmUserInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceCTLS.resx">
+      <DependentUpon>InterfaceCTLS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IRC_DCSE.resx">
+      <DependentUpon>IRC_DCSE.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="rfc2812.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+</Project>

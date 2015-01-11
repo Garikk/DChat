@@ -1,0 +1,24 @@
+/# DZFS.net 2003
+/# DChat Project
+/# --------------------------------
+/# Test Menu for Plugin
+/# --------------------------------
+/# Created by Garikk
+/# --------------------------------
+
+ /#---------
+ /#Здесь Создаём менюшку для плагина
+ /#---------
+ /loadblock /base addbasemenu
+ Консоль:/#:/#
+ .Проверка:/#:/#
+ ..Активен2:CtrlS:/base chmode 1
+ ..Занят2:CtrlD:/base chmode 2
+ ..Ушёл2: CtrlA:/base chmode 3
+ ..Отключен2:CtrlF:/base chmode 4
+ ..Игровой2:CtrlG:/base chmode 5
+ .-:/#:/#
+ .Настройки2:AltO:/base showoptions
+ .-:/#:/#
+ .Выход:/#:/base exit p
+ /endblock 

@@ -1,0 +1,32 @@
+формат пакетов DChat-DC
+
+Общий заголовок
+	PckIND PckVER DCZone senderUID toCHL REZerve
+
+	PckIND (4 байта) - Индентификатор пакета, см. decl.vb
+	PckVER (2 байта) - Версия интерфейса пакета (Gx52)
+	DCZone (2 байта) - Номер зоны (Gx52)
+	senderUID (2 байта) - UID отправителя (Gx52)
+	toCHL (2 байта) - Текущий канал отправителя (Gx52)
+	REZerve (2 байта) - Резерв = "00"
+
+
+NET_ONLINE VER ZONE UID CHL REZ USTATE UMODE UROLE UNAME
+ USTATE (0/1) 0 -не смотрит в чат, 1- Смотрит в чат
+ UMODE  см. decl.vb ' режим
+ UROLE  см. decl.vb ' роль в  сети
+ UNAME  имя пользователя
+-----
+NET_CHOPT VER ZONE UID CHL REZ DO LenP1 PARAM1 PARAM2 (если PARAM2 отсутствует, lenP1 не указывается)
+----
+NET_MSG VER ZONE UID CHL REZ DO LenIPs IPs MSG
+NET_MSG VER ZONE UID CHL REZ DO 00 IP MSG
+-----
+NET_INFO VER ZONE UID CHL REZ DO toUID [Info]
+----
+NET_GETTHEME VER ZONE UID CHL REZ DO [Topic]
+----
+NET_CHAT VER ZONE UID CHL REZ DO Txt
+----
+NET_PRIVAT  VER ZONE UID 00 REZ ToUSR DO ToPriv DAT
+---- 

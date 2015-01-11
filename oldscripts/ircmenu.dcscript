@@ -1,0 +1,19 @@
+/# DZFS.net 2003
+/# DChat Project
+/# --------------------------------
+/# Test Menu for Plugin
+/# --------------------------------
+/# Created by Garikk
+/# --------------------------------
+
+ /#---------
+ /#Здесь Создаём менюшку для плагина
+ /#---------
+ /loadblock /base addbasemenu
+ IRC:/#:/#
+ .Проверка:/#:/#
+ .Настройки2:AltO:/base showoptions
+ .Test:/#:/showoptions
+ .-:/#:/#
+ .Выход:/#:/base exit p
+ /endblock 

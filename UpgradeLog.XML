@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="DChat2">
+</Property><Property Name="Solution File" Value="C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\DChat2.sln">
+</Property><Property Name="User Options File" Value="C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\DChat2.suo">
+</Property><Property Name="Date" Value="12 сентября 2009 г.">
+</Property><Property Name="Time" Value="22:46">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="DChat2.sln" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\DChat2.sln">
+</Event><Event ErrorLevel="0" Project="" Source="DChat2.suo" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\DChat2.suo">
+</Event><Event ErrorLevel="0" Project="DChat" Source="DChat.vbproj" Description="Project file successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\DChat.vbproj">
+</Event><Event ErrorLevel="0" Project="DChat" Source="DChat.vbproj.user" Description="Project user file successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\DChat.vbproj.user">
+</Event><Event ErrorLevel="0" Project="DChat" Source="AssemblyInfo.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\AssemblyInfo.vb">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Forms\frmAbout.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Forms\frmAbout.vb">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Forms\frmChat.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Forms\frmChat.vb">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Forms\Settings.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Forms\Settings.vb">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\Chat.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\Chat.vb">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\DCB_DCSE2.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\DCB_DCSE2.vb">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\Decl.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\Decl.vb">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\Settings2.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\Settings2.vb">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\UNI_Chl.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\UNI_Chl.vb">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\UNI_InterfManager.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\UNI_InterfManager.vb">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\UNI_Network.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\UNI_Network.vb">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\UNI_PMGR.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\UNI_PMGR.vb">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\UNI_UDB.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\UNI_UDB.vb">
+</Event><Event ErrorLevel="0" Project="DChat" Source="DC3232.ico" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\DC3232.ico">
+</Event><Event ErrorLevel="0" Project="DChat" Source="What's New.txt" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\What's New.txt">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Forms\frmAbout.resx" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Forms\frmAbout.resx">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Forms\frmChat.resx" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Forms\frmChat.resx">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Forms\Settings.resx" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Forms\Settings.resx">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\Ico\AwyTray.ico" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\Ico\AwyTray.ico">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\Ico\Empty.ico" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\Ico\Empty.ico">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\Ico\gamTray.ico" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\Ico\gamTray.ico">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\Ico\InMail.ico" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\Ico\InMail.ico">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\Ico\mainV2.ico" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\Ico\mainV2.ico">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\Ico\offTray.ico" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\Ico\offTray.ico">
+</Event><Event ErrorLevel="0" Project="DChat" Source="Modules\Ico\Work.ico" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\Modules\Ico\Work.ico">
+</Event><Event ErrorLevel="0" Project="DChat" Source="DChat.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DChat" Source="DChat.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\IRC.vbproj" Description="Project file successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\IRC.vbproj">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\IRC.vbproj.user" Description="Project user file successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\IRC.vbproj.user">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\AssemblyInfo.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\AssemblyInfo.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmAddCHL.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmAddCHL.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmAddFriend.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmAddFriend.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmChangeMode.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmChangeMode.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmCHLInfo.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmCHLInfo.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmFirstMaster.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmFirstMaster.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmIRCColorEditor.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmIRCColorEditor.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmMsg.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmMsg.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmUserInfo.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmUserInfo.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\InterfaceCTLS.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\InterfaceCTLS.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\InterfObjects.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\InterfObjects.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\IRChat.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\IRChat.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\IRC_Consts.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\IRC_Consts.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\IRC_DCSE.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\IRC_DCSE.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\IRC_Declares.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\IRC_Declares.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\IRC_Operation.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\IRC_Operation.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\IRC_Process.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\IRC_Process.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\IRC_Settings.vb" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\IRC_Settings.vb">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\rfc2812.txt" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\rfc2812.txt">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmAddCHL.resx" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmAddCHL.resx">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmAddFriend.resx" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmAddFriend.resx">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmChangeMode.resx" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmChangeMode.resx">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmCHLInfo.resx" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmCHLInfo.resx">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmFirstMaster.resx" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmFirstMaster.resx">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmIRCColorEditor.resx" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmIRCColorEditor.resx">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmMsg.resX" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmMsg.resX">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\frmUserInfo.resx" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\frmUserInfo.resx">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\InterfaceCTLS.resx" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\InterfaceCTLS.resx">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\IRC_DCSE.resx" Description="File successfully backed up as C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\Backup\IRC\IRC_DCSE.resx">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\IRC.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="IRC" Source="IRC\IRC.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="DChat2.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="DChat2.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DChat" Source="DChat.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="IRC" Source="IRC\IRC.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

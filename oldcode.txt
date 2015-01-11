@@ -1,0 +1,294 @@
+Old Code!
+
+
+    '    Dim CurMsgMode As Declares.MESSAGES
+    '    Dim ToUser As Integer
+
+    '    Private Sub PrepareForm(ByVal ToUID As Integer, ByVal MsgShowMode As Declares.MESSAGES)
+    '        ' Подготовка интерфейса
+    '        Select Case MsgShowMode
+    '            Case Declares.MESSAGES.MSG_IN  ' Входящий лично
+    '                splMsg.Visible = False
+    '                pnlUsers.Visible = False
+    '                Me.Text = "<- " & uni_udb_ctl.Users(ToUID, ChlMain).UserName
+    '                txtMessage.ReadOnly = True
+    '            Case Declares.MESSAGES.MSG_INALL ' Входящий многоадресный
+    '                splMsg.Visible = False
+    '                pnlUsers.Visible = False
+    '                Me.Text = "Многоадресное сообщение от " & UNI_BASE_UDB_CTL.Users(ToUID, ChlMain).UserName
+    '                txtMessage.ReadOnly = True
+    '            Case Declares.MESSAGES.MSG_INALLC ' Входящий в чат
+    '                ' Нет подготовки
+    '            Case Declares.MESSAGES.MSG_TOALL, Declares.MESSAGES.MSG_TOALLC ' Отправка общее в  чат ' Отправка многоадресный
+    '                cmdOk.Visible = False
+    '                cmdPrivat.Visible = False
+    '                cmdAnswer.Text = "&Отправить"
+    '                cmdCit.Text = "Отме&на"
+    '                Me.Text = "Многоадресное сообщение"
+    '                chkToChat.Visible = True
+    '                txtMessage.ReadOnly = False
+    '            Case Declares.MESSAGES.MSG_TOONE
+    '                splMsg.Visible = False
+    '                cmdOk.Visible = False
+    '                cmdPrivat.Visible = False
+    '                pnlUsers.Visible = False
+    '                cmdAnswer.Text = "&Отправить"
+    '                cmdCit.Text = "Отме&на"
+    '                Me.Text = "-> " & UNI_BASE_UDB_CTL.Users(ToUID, ChlMain).UserName
+    '                txtMessage.ReadOnly = False
+    '        End Select
+    '    End Sub
+    '#Region "Обработка пакетов"
+    '    Private Function FindMyUID(ByVal IPs As String) As Boolean
+    '        Dim FindMyIP As Object
+    '        Dim Tmp As Object
+    '        For Tmp = 1 To Len(IPs) Step 2
+    '            If Gx52ToDEC(Mid(IPs, Tmp, 2)) = DC_NetworkSettings.UID Then FindMyUID = True : Exit Function
+    '        Next Tmp
+    '        FindMyIP = False
+    '    End Function
+
+    '    Private Function CheckIPs(ByVal IPs As String) As Boolean
+    '        Dim Tmp As Integer
+    '        Dim MyUIDx As String = DC_NetworkSettings.hUID
+    '        For Tmp = 1 To IPs.Length Step 2
+    '            If Mid(IPs, Tmp, 2) = MyUIDx Then
+    '                CheckIPs = True
+    '                Exit Function
+    '            End If
+    '        Next Tmp
+    '        CheckIPs = False
+    '    End Function
+    '    Private Function GetIPs() As String
+    '        Dim Tmp As Integer
+    '        Dim AllIPs As Integer
+    '        For Tmp = 0 To lstUsers.GetNodeCount(False) - 1
+    '            If lstUsers.Nodes.Item(Tmp).Checked = True Then
+    '                GetIPs = GetIPs & DECToGx52(lstUsers.Nodes(Tmp).Tag)
+    '                AllIPs = AllIPs + 1
+    '            End If
+    '        Next
+    '        GetIPs = DECToGx52(AllIPs) & GetIPs
+    '    End Function
+    '#End Region
+
+    '#Region "Отправка/Получение сообщений"
+    '    Public Sub SendMSG(ByVal toUID As Integer, ByVal MsgTyp As Declares.MESSAGES, Optional ByVal DefMsg As String = "")
+    '        CurMsgMode = MsgTyp
+    '        PrepareForm(toUID, CurMsgMode)
+    '        txtMessage.Text = DefMsg
+    '        Select Case MsgTyp
+    '            Case Declares.MESSAGES.MSG_TOONE
+    '                ToUser = toUID
+    '                txtMessage.Text = DefMsg
+    '                txtMessage.Focus()
+    '                txtMessage.SelectionStart = txtMessage.TextLength
+    '                Me.Show()
+    '                '  Me.Activate()
+    '            Case Declares.MESSAGES.MSG_TOALL
+    '                Me.Show()
+    '        End Select
+    '    End Sub
+    '    Public Sub Receive(ByVal UID As Integer, ByVal Msg As String)
+    '        Dim RecMsgType As Declares.MESSAGES
+    '        Dim LenIPs As Integer
+    '        Dim TimeString As String = TimeOfDay & " " & Date.Today
+    '        RecMsgType = Mid(Msg, 1, 1)
+    '        ToUser = UID
+    '        CurMsgMode = RecMsgType
+    '        Select Case RecMsgType
+    '            Case Declares.MESSAGES.MSG_IN
+    '                If Gx52ToDEC(Mid(Msg, 4, 2)) = DC_NetworkSettings.UID Then
+    '                    ' Проверка на режим отключен
+    '                    If UNI_UserSettings.UMode = NET_ONLINE_MOD_CONS.MOD_OFF Or UNI_UserSettings.UMode = NET_ONLINE_MOD_CONS.MOD_OFFH Then
+    '                        DC_SendMessage(1, UNI_GetCurrentChannel, NET_MSG, Declares.MESSAGES.MSG_OFFMODANS & DECtoGx52(UID))
+    '                        CloseForm()
+    '                        Exit Sub
+    '                    End If
+    '                    ' Отображение сообщения
+    '                    PrepareForm(UID, RecMsgType)
+    '                    txtMessage.Text = Decoding(Mid(Msg, 6), MSG_KEY)
+    '                    txtMessage_TextChanged(Me, New System.EventArgs())
+    '                    UNI_Talk(UID, ChlMain,UNI.UNI_DC_Types.UNI_MSG_Types.MSG_MSG, UNI_BASE_UDB_CTL.Users(UID, ChlMain).UserName & " послал сообщение")
+    '                    DC_SendMessage(1, UNI_GetCurrentChannel, Declares.NET_MSG, Declares.MESSAGES.MSG_ANSW & DECtoGx52(UID))
+    '                    If (UNI_UserSettings.UMode = NET_ONLINE_MOD_CONS.MOD_AWAY And UNI_InterfaceSettings.PupUpMsgAway = False) = True Or (UNI_InterfaceSettings.PupUpMsgBusy = False And UNI_UserSettings.UMode = NET_ONLINE_MOD_CONS.MOD_WORK) = True Or (UNI_InterfaceSettings.PupUpMsgGame = False And UNI_UserSettings.UMode = NET_ONLINE_MOD_CONS.MOD_GAME) = True Then
+    '                        Me.Validate()
+    '                        Me.WindowState = FormWindowState.Minimized
+    '                        Me.Visible = True
+    '                    Else
+    '                        Me.Validate()
+    '                        Me.Visible = True
+    '                        Me.Activate()
+    '                    End If
+    '                    ' Запись сообщения в протокол быстрого доступа
+    '                    AddMsgToArcList(Declares.MSG_ARC_ICO.ICO_IN, DECtoGx52(UID) & txtMessage.Text)
+    '                    'Отправка на протоколирование
+    '                    frmArchive.DefInstance.WriteInLog(ArcTypes.ARC_MSGIN, DECtoGx52(TimeString.Length) & TimeString & DECtoGx52(UNI_BASE_UDB_CTL.Users(UID, ChlMain).UserName.Length) & UNI_BASE_UDB_CTL.Users(UID, ChlMain).UserName & DECtoGx52(txtMessage.Text.Length) & txtMessage.Text)
+    '                Else
+    '                    CloseForm()
+    '                End If
+    '            Case Declares.MESSAGES.MSG_INALL
+    '                LenIPs = Gx52ToDEC(Mid(Msg, 2, 2)) * 2
+    '                If CheckIPs(Mid(Msg, 4, LenIPs)) = False Then Me.CloseForm() : Exit Sub
+    '                PrepareForm(UID, RecMsgType)
+    '                txtMessage.Text = Decoding(Mid(Msg, 4 + (LenIPs)), MSG_KEY)
+    '                txtMessage_TextChanged(Me, New System.EventArgs())
+    '                UNI_Talk(UID, ChlMain,UNI.UNI_DC_Types.UNI_MSG_Types.MSG_MSGALL, UNI_BASE_UDB_CTL.Users(UID, ChlMain).UserName & " послал сообщение")
+    '                DC_SendMessage(1, UNI_GetCurrentChannel, Declares.NET_MSG, Declares.MESSAGES.MSG_ANSW & DECtoGx52(UID))
+    '                AddMsgToArcList(Declares.MSG_ARC_ICO.ICO_IN, DECtoGx52(UID) & txtMessage.Text)
+    '                'LogMessage
+    '                'Отправка на протоколирование
+    '                frmArchive.DefInstance.WriteInLog(ArcTypes.ARC_MSGIN, DECtoGx52(TimeString.Length) & TimeString & DECtoGx52(UNI_BASE_UDB_CTL.Users(UID, ChlMain).UserName.Length) & UNI_BASE_UDB_CTL.Users(UID, ChlMain).UserName & DECtoGx52(txtMessage.Text.Length) & txtMessage.Text)
+
+    '                Me.Show()
+    '            Case Declares.MESSAGES.MSG_INALLC
+    '                LenIPs = Gx52ToDEC(Mid(Msg, 2, 2)) * 2
+    '                If CheckIPs(Mid(Msg, 4, LenIPs)) = False Then Me.CloseForm() : Exit Sub
+    '                PrepareForm(UID, RecMsgType)
+    '                txtMessage.Text = Decoding(Mid(Msg, 4 + (LenIPs)), MSG_KEY)
+    '                txtMessage.Text = "Многоадресное сообщение от " & UNI_BASE_UDB_CTL.Users(UID, ChlMain).UserName & Chr(13) & txtMessage.Text
+    '                UNI_Talk(UID, ChlMain,UNI.UNI_DC_Types.UNI_MSG_Types.MSG_MSGALL, txtMessage.Text)
+    '                DC_SendMessage(1, UNI_GetCurrentChannel, Declares.NET_MSG, Declares.MESSAGES.MSG_ANSW & DECtoGx52(UID))
+    '                CloseForm()
+    '                AddMsgToArcList(Declares.MSG_ARC_ICO.ICO_IN, DECtoGx52(UID) & txtMessage.Text)
+    '                'LogMessage
+    '                'Отправка на протоколирование
+    '                frmArchive.DefInstance.WriteInLog(ArcTypes.ARC_MSGIN, DECtoGx52(TimeString.Length) & TimeString & DECtoGx52(Users(UID, ChlMain).UserName.Length) & UNI_BASE_UDB_CTL.Users(UID, ChlMain).UserName & DECtoGx52(txtMessage.Text.Length) & txtMessage.Text)
+
+    '            Case Declares.MESSAGES.MSG_ANSW
+    '                If Gx52ToDEC(Mid(Msg, 2, 2)) = DC_NetworkSettings.UID Then
+    '                    UNI_BASE_UDB_CTL.Users(UID, ChlMain,UNI.UNI_DC_Types.UNI_MSG_Types.MSG_MSG_RECEIVE, UNI_BASE_UDB_CTL.Users(UID, ChlMain).UserName & " получил сообщение", , False)
+    '                End If
+    '            Case Declares.MESSAGES.MSG_OFFMODANS
+    '                If Gx52ToDEC(Mid(Msg, 2, 2)) = DC_NetworkSettings.UID Then
+    '                    UNI_Talk(UID, ChlMain,UNI.UNI_DC_Types.UNI_MSG_Types.MSG_MSG, Users(UID, ChlMain).UserName & " находится в режиме отключен", , False)
+    '                End If
+    '        End Select
+    '    End Sub
+    '#End Region
+    '    Private Sub cmdCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '        Me.Dispose()
+    '    End Sub
+
+    '    Private Sub cmdOk_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdOk.Click
+    '        Me.Dispose()
+    '    End Sub
+    '    Private Sub cmdAnswer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdAnswer.Click
+    '        Dim IPs As String
+    '        If CurMsgMode = Declares.MESSAGES.MSG_TOALL Or CurMsgMode = Declares.MESSAGES.MSG_TOALLC Then
+    '            IPs = GetIPs()
+    '            If IPs.Length = 2 Then MsgBox("Вы не выбрали получателей сообщения", MsgBoxStyle.Critical) : Exit Sub
+    '            'Отправка на протоколирование
+    '            frmArchive.DefInstance.WriteInLog(ArcTypes.ARC_MSGOUT, DECToGx52(TimeString.Length) & TimeString & DECToGx52("<Mass>".Length) & "<Mass>" & DECToGx52(txtMessage.Text.Length) & txtMessage.Text)
+    '            AddMsgToArcList(Declares.MSG_ARC_ICO.ICO_OUT, "00" & txtMessage.Text)
+    '            If chkToChat.Checked = True Then
+    '                DC_SendMessage(1, UNI_GetCurrentChannel, NET_MSG, Declares.MESSAGES.MSG_INALLC & IPs & Coding(txtMessage.Text, MSG_KEY))
+    '            Else
+    '                DC_SendMessage(1, UNI_GetCurrentChannel, NET_MSG, Declares.MESSAGES.MSG_INALL & IPs & Coding(txtMessage.Text, MSG_KEY))
+    '            End If
+    '            CloseForm()
+    '        ElseIf CurMsgMode = Declares.MESSAGES.MSG_TOONE Then
+    '            If Users(ToUser, ChlMain).UserName = ChlMain.FCell.UserName Then MsgBox("Пользователь не доступен", MsgBoxStyle.Critical) : Exit Sub
+    '            AddMsgToArcList(Declares.MSG_ARC_ICO.ICO_OUT, DECtoGx52(ToUser) & txtMessage.Text)
+    '            'Отправка на протоколирование
+    '            frmArchive.DefInstance.WriteInLog(ArcTypes.ARC_MSGOUT, DECtoGx52(TimeString.Length) & TimeString & DECtoGx52(Users(ToUser, ChlMain).UserName.Length) & Users(ToUser, ChlMain).UserName & DECtoGx52(txtMessage.Text.Length) & txtMessage.Text)
+    '            DC_SendMessage(1, UNI_GetCurrentChannel, NET_MSG, Declares.MESSAGES.MSG_IN & "00" & DECtoGx52(ToUser) & Coding(txtMessage.Text, MSG_KEY))
+    '            CloseForm()
+    '        ElseIf CurMsgMode = Declares.MESSAGES.MSG_IN Or CurMsgMode = Declares.MESSAGES.MSG_INALL Then
+    '            CurMsgMode = Declares.MESSAGES.MSG_TOONE
+    '            SendMSG(ToUser, Declares.MESSAGES.MSG_TOONE)
+    '        End If
+    '        'LogMessage
+
+    '    End Sub
+
+    '    Private Sub chkToChat_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles chkToChat.CheckedChanged
+    '        If chkToChat.Checked = True Then
+    '            CurMsgMode = Declares.MESSAGES.MSG_TOALLC
+    '        Else
+    '            CurMsgMode = Declares.MESSAGES.MSG_TOALL
+    '        End If
+    '    End Sub
+
+    '    Private Sub frmMessage_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    '        Dim Ptr As UNI_SUList
+    '        txtMessage.Font = New Font(UNI_InterfaceSettings.ChatFont, UNI_InterfaceSettings.ChatFontSize)
+    '        txtMessage.BackColor = UNI_ColorSettings.BackChatColor
+    '        lstUsers.Font = New Font(UNI_InterfaceSettings.ChatFont, UNI_InterfaceSettings.ChatFontSize)
+    '        lstUsers.BackColor = UNI_ColorSettings.BackChatColor
+
+    '        Ptr = ChlMain.UsersDB.NextItem
+    '        Do While Ptr.UserName <> ChlMain.UsersDB.UserName
+    '            AddUserToList(Ptr.UserName, Ptr.UserUID)
+    '            Ptr = Ptr.NextItem
+    '        Loop
+    '    End Sub
+
+    '    Private Sub AddUserToList(ByVal Nam As String, ByVal UID As String)
+    '        Dim NewNode As New TreeNode()
+    '        NewNode.Text = Nam
+    '        NewNode.Tag = UID
+    '        NewNode.Checked = True
+    '        lstUsers.Nodes.Add(NewNode)
+    '    End Sub
+    '    Private Sub cmdRefresh_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdRefresh.Click
+    '        Dim Ptr As UNI_SUList
+    '        Dim NewNode As New TreeNode()
+    '        Ptr = ChlMain.UsersDB.NextItem
+    '        lstUsers.Nodes.Clear()
+    '        Do While Ptr.UserName <> ChlMain.UsersDB.UserName
+    '            AddUserToList(Ptr.UserName, Ptr.UserUID)
+    '            Ptr = Ptr.NextItem
+    '        Loop
+    '    End Sub
+
+    '    Private Sub CloseForm()
+    '        Me.Dispose()
+    '    End Sub
+
+    '    Private Sub cmdCit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdCit.Click
+    '        If CurMsgMode = Declares.MESSAGES.MSG_TOALL Or CurMsgMode = Declares.MESSAGES.MSG_TOALLC Or CurMsgMode = Declares.MESSAGES.MSG_TOONE Then
+    '            CloseForm()
+    '        Else ' Цитирование
+    '            SendMSG(ToUser, Declares.MESSAGES.MSG_TOONE, CitMsg(txtMessage.Text))
+    '        End If
+    '    End Sub
+
+    '    Private Sub txtMessage_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtMessage.TextChanged
+    '        lblMsgInfo.Text = "Сообщение: " & txtMessage.TextLength & "/3000"
+    '    End Sub
+
+    '    Public Function CitMsg(ByVal Txt As String) As String
+    '        Dim Tmp As Integer
+    '        CitMsg = "> "
+    '        For Tmp = 1 To Txt.Length
+    '            If Mid(Txt, Tmp, 1) <> Chr(10) Then
+    '                CitMsg = CitMsg & Mid(Txt, Tmp, 1)
+    '            Else
+    '                CitMsg = CitMsg & Chr(10) & "> "
+    '            End If
+    '        Next
+    '        CitMsg = CitMsg & Chr(10) & Chr(10)
+    '    End Function
+
+    '    Private Sub txtMessage_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txtMessage.KeyDown
+    '        If e.Control = True And e.KeyCode = Keys.Back Then
+    '            txtMessage.Text = ChangeLayout(txtMessage.Text)
+    '            txtMessage.SelectionStart = txtMessage.TextLength
+    '            e.Handled = True
+    '            e = New System.Windows.Forms.KeyEventArgs(Keys.None)
+    '        End If
+    '    End Sub
+
+
+    '    Private Sub frmMessage_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
+    '        If (e.Control = True And e.Shift = False And e.Alt = False And e.KeyCode = Keys.Enter) Or (e.Control = False And e.Shift = False And e.Alt = True And e.KeyCode = Keys.Enter) Then
+    '            If Me.CurMsgMode = Declares.MESSAGES.MSG_TOALL Or CurMsgMode = Declares.MESSAGES.MSG_TOALLC Or CurMsgMode = Declares.MESSAGES.MSG_TOONE Then
+    '                cmdAnswer_Click(Me, New System.EventArgs())
+    '            End If
+    '        ElseIf e.Control = False And e.Shift = False And e.Alt = False And e.KeyCode = Keys.Enter Then
+    '            If Me.CurMsgMode = Declares.MESSAGES.MSG_IN Or Me.CurMsgMode = Declares.MESSAGES.MSG_INALL Or Me.CurMsgMode = Declares.MESSAGES.MSG_INALLC Then
+    '                cmdAnswer_Click(Me, New System.EventArgs())
+    '            End If
+    '        End If
+    '    End Sub

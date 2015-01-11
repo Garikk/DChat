@@ -1,0 +1,93 @@
+/# DZFS.net 2003
+/# DChat Project
+/# --------------------------------
+/# User Modes
+/# --------------------------------
+/# Created by Garikk
+/# --------------------------------
+dcse_blocknodirectcall
+
+/# Автоответ при открытии привата
+/# ВНИМАНИЕ ФОРМАТ PRIVMSG ИЗ RFC2812, незабывайте двоеточие после адреса назначения
+/# В качестве $1 передаётся ник начавшего приват
+/# ---------------------------------------------
+
+proc irc_mod_wrk_priv
+  /privmsg $1:Извините, я сейчас занят (%currentmodecomment%), как только освобожусь, отвечу.
+end proc
+
+proc irc_mod_awy_priv
+  /privmsg $1 :Извините, меня сейчас нет за компьютером (%currentmodecomment%), как только вернусь, отвечу.
+end proc
+
+proc irc_mod_ply_priv
+  /privmsg $1 :Извините, я сейчас играю (%currentmodecomment%), как только освобожусь, отвечу.
+end proc
+
+proc irc_mod_off_priv
+  /privmsg $1 :Извините, я сейчас нехочу ни с кем разговаривать (%currentmodecomment%).
+end proc
+proc irc_mod_act_priv
+ /# ничего, можно приветствие написать
+end proc
+
+
+
+/#--------------------------------------------------------------------------------------------------
+proc AddModes
+ irc_addumode Активен:irc_mod_act:CtrlS
+ irc_addumode Занят:irc_mod_wrk:CtrlA
+ irc_addumode Ушёл:irc_mod_awy:CtrlD
+ irc_addumode Отключен:irc_mod_off:CtrlF
+ irc_addumode Игровой:irc_mod_ply:CtrlG
+ irc_activateumodesinterface
+ irc_initlastmode
+end proc
+/#--------------
+/# irc_setumodesettings [snds] [qpop] [apop] (Q-Разворчанивание, А - сделать активным)
+
+proc irc_mod_act
+ irc_setumodesettings 1 1 1
+ irc_setumodeprivact irc_mod_act_priv
+ irc_initmode_g %procname%
+ /nick %usrnick_%
+ /away
+end proc
+proc irc_mod_wrk
+ if irc_modeautoset false : irc_askmodecomment %procname%
+ if irc_selmodehalt true : dcse_haltscript
+ irc_initmode_g %procname%
+ irc_setumodesettings 0 0 0
+ irc_setumodeprivact irc_mod_wrk_priv
+ /nick %usrnick_%_Занят
+ /away [Busy] %currentmodecomment%
+end proc
+proc irc_mod_awy
+ if irc_modeautoset false : irc_askmodecomment %procname%
+ if irc_selmodehalt true : dcse_haltscript
+ irc_initmode_g %procname%
+ irc_setumodesettings 1 1 1
+ irc_setumodeprivact irc_mod_wrk_priv
+ /nick %usrnick_%_Ушёл
+ /away [Away] %currentmodecomment%
+end proc
+
+proc irc_mod_off
+ if irc_modeautoset false : irc_askmodecomment %procname%
+ if irc_selmodehalt true : dcse_haltscript
+ irc_initmode_g %procname%
+ irc_setumodesettings 0 0 0
+ irc_setumodeprivact irc_mod_off_priv
+ /nick %usrnick_%_Отключен
+ /away [Off] %currentmodecomment%
+end proc
+
+proc irc_mod_ply
+ if irc_modeautoset false : irc_askmodecomment %procname%
+ if irc_selmodehalt true : dcse_haltscript
+ irc_initmode_g %procname%
+ irc_setumodesettings 0 0 1
+ irc_setumodeprivact irc_mod_ply_priv
+ /nick %usrnick_%_Играю
+ /away [Play] %currentmodecomment%
+end proc

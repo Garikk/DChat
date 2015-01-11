@@ -1,0 +1,16 @@
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\bin\Addons\IRC.dll
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\bin\Addons\IRC.xml
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\IRC\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\IRC\obj\Release\IRC.frmAddCHL.resources
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\IRC\obj\Release\IRC.frmAddFriend.resources
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\IRC\obj\Release\IRC.frmChangeMode.resources
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\IRC\obj\Release\IRC.frmCHLInfo.resources
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\IRC\obj\Release\IRC.frmFirstMaster.resources
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\IRC\obj\Release\IRC.frmIRCColorEditor.resources
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\IRC\obj\Release\IRC.frmMessage.resources
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\IRC\obj\Release\IRC.frmUserInfo.resources
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\IRC\obj\Release\IRC.InterfaceCTLS.resources
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\IRC\obj\Release\IRC.IRC_UniTimer.resources
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\IRC\obj\Release\IRC.vbproj.GenerateResource.Cache
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\IRC\obj\Release\IRC.dll
+C:\Users\Garikk\Desktop\!!!Transfer!!!\mydocs\programming\OLD_PROJECTS\DChat2\IRC\obj\Release\IRC.xml

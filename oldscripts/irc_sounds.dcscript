@@ -1,0 +1,21 @@
+/# DZFS.net 2004
+/# DChat Project
+/# --------------------------------
+/# IRC Chat Sounds manager
+/# --------------------------------
+/# Created by Garikk
+/# --------------------------------
+/# irc_register_sm_event [name],[pref],[sfcmdenable 1/0],[ppcmd 1/0],[cmd] 
+/# если установлен sfcmdenable, то в %sfcmd% передаётся весь server message
+/# если установлен ppcmd то обработчик вызывается ДО выполнения системного обработчика
+/# ВНИМАНИЕ! Ошибки в этом файле могут привести к частичной или полной неработоспособности программы, будте осторожны
+
+proc registersoundevents
+ PID=%PID%
+ irc_register_sm_event Вход на канал,JOIN,1,0,irc_sndmgr join logon.wav :%sfcmd%
+ irc_register_sm_event Выход с канала,PART,1,1,irc_sndmgr part logoff.wav :%sfcmd%
+ irc_register_sm_event Выход из IRC,QUIT,1,1,irc_sndmgr quit logoff.wav :%sfcmd%
+ irc_register_sm_event Изменение ника,NICK,1,0,irc_sndmgr nick name.wav :%sfcmd%
+ irc_register_sm_event Изменение темы,TOPIC,1,0,irc_sndmgr topic topic.wav :%sfcmd%
+/# irc_register_sm_event Кик,KICK,1,1,irc_sndmgr kick 
+end proc

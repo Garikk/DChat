@@ -1,0 +1,19 @@
+/# DZFS.net 2003
+/# DChat Project
+/# --------------------------------
+/# DC Client
+/# DC Menu
+/# --------------------------------
+/# Created by Garikk
+/# --------------------------------
+
+proc CreateUsersMenu
+ /createmenu dcuserslist Сообщение Ins /dccmd msgcc
+ /createmenu dcuserslist Сигнал CtrlB /dccmd beepcc
+ /createmenu dcuserslist Сказать CtrlN /dccmd saycc
+ /createmenu dcuserslist - None /# /#
+ /createmenu dcuserslist Информация CtrlI /dccmd getfinfocc
+ /createmenu dcuserslist Игнорировать None /dccmd ignorecc
+ /createmenu dcuserslist - None /# /#
+ /createmenu dcuserslist Многоадресное_сообщение F6 /dccmd msgall
+end proc

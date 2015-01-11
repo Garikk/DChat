@@ -1,0 +1,15 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=DChat Help.chm
+Contents file=c:\Documents\programming\DChat2\Help\TOC.hhc
+Display compile progress=No
+Language=0x419 Русский
+Title=DChat Help
+
+
+[FILES]
+C:\Documents\programming\DChat2\Help\about.htm
+C:\Documents\programming\DChat2\Help\ColorWarn.htm
+
+[INFOTYPES]
+

@@ -1,0 +1,29 @@
+/# DZFS.net 2003
+/# DChat Project
+/# --------------------------------
+/# Base Interface, MainMenu Template
+/# --------------------------------
+/# Created by Garikk
+/# --------------------------------
+
+
+ /loadblock /base addbasemenu
+ Разговор:/#:/#
+ .Режим:/#:/#
+ ..Активен:CtrlS:/base chmode 1
+ ..Занят:CtrlD:/base chmode 2
+ ..Ушёл: CtrlA:/base chmode 3
+ ..Отключен:CtrlF:/base chmode 4
+ ..Игровой:CtrlG:/base chmode 5
+ .-:/#:/#
+ .Настройки:AltO:/base showoptions
+ .-:/#:/#
+ .Выход:/#:/base exit p
+ /nextmenu
+ /loadpluginmenu
+ Справка:/#:/#
+ .Справка:F1:/base help
+ .-:/#:/#
+ .О программе:/#:/base showabout
+/endblock 
+/base displaymainmenu
