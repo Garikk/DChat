@@ -1,0 +1,34 @@
+/# DZFS.net 2003
+/# DChat Project
+/# --------------------------------
+/# IRC Client
+/# IRC Settings GUI Interface (DCB_V1 Std)
+/# --------------------------------
+/# Created by Garikk
+/# --------------------------------
+dcse_blocknodirectcall
+PID=%PID%
+proc settingswindowshow
+ /base dcb_dcgui_addsettingspanel %PID% ircgui_getservpnl
+ /base dcb_dcgui_addsettingspanel %PID% ircgui_getcolorspnl
+ /base dcb_dcgui_addsettingspanel %PID% ircgui_getnetoptionspnl
+ /base dcb_dcgui_addsettingspanel %PID% ircgui_strings
+ /base dcb_dcgui_addsettingspanel %PID% ircgui_getuserspnl
+ /base dcb_dcgui_addsettingspanel %PID% ircgui_performwindow
+ /base dcb_dcgui_addsettingspanel %PID% ircgui_soundoptions
+ /base dcb_dcgui_addsettingspanel %PID% ircgui_modes
+
+/loadblock /base dcb_createsettingstree
+ IRC:/#
+ .Подключение:ircgui_getuserspnl
+ ..Сервер:ircgui_getservpnl
+ ..Параметры подключения:ircgui_getnetoptionspnl
+ ..Автовыполнение:ircgui_performwindow
+ .Внешний вид:/#
+ ..Цвета:ircgui_getcolorspnl
+ ..Текст.сообщения:ircgui_strings
+ .Режимы:ircgui_modes
+ .Звуки:ircgui_soundoptions
+/endblock
+end proc
+ 

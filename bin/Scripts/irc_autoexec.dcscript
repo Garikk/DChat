@@ -1,0 +1,17 @@
+/# DChat - IRC
+/# Autoexec File
+/# -------------------
+
+PID=%PID%
+
+/# ---- DO NOT MODIFY THIS LINES ----
+irc_loadfavoriteslist
+irc_loadservers
+irc_loadperformlist
+/# ----- irc_loadfriendslist
+irc_clearcolorschemes
+irc_loadcolorschemes
+irc_initumode addmodes
+irc_regsounds
+/#  ----------------------------------
+/# --- Place you commands before this line --- /

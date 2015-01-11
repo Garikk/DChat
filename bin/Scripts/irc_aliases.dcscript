@@ -1,0 +1,21 @@
+/# DZFS.net 2004
+/# DChat Project
+/# --------------------------------
+/# IRC Client
+/# IRC Chat Scripts
+/# irc_aliases.dcscript
+/# --------------------------------
+/# Created by Garikk
+/# --------------------------------
+
+dcse_blocknodirectcall
+
+proc j
+ PID=%PID%
+ /join $1-
+end proc
+
+proc p
+ PID=%PID%
+ /part $1
+end proc

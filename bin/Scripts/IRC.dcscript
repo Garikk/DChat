@@ -1,0 +1,72 @@
+/# DZFS.net 2003
+/# DChat Project
+/# --------------------------------
+/# IRC Client
+/# IRC Chat Scripts
+/# --------------------------------
+/# Created by Garikk
+/# --------------------------------
+
+dcse_blocknodirectcall
+
+proc BanAndKick
+	PID=%PID%
+	/mode %currentchannel% +b %selectedusername%
+	/kick %currentchannel% %selectedusername% :%selectedusername%
+end proc
+
+proc BanAndKickA
+	PID=%PID%
+	/mode %currentchannel% +b %selectedusername%
+	/kick %currentchannel% %selectedusername% :$?=За что?=?$
+end proc
+
+proc KickA
+	PID=%PID%
+	/kick %currentchannel% %selectedusername% :$?=За что?=?$
+end proc
+
+proc Rejoin
+	PID=%PID%
+	/part $1
+	/join $1
+end proc
+proc setaway
+	/away $?="Комментарий"=?$
+end proc
+proc setunaway
+	/away
+end proc
+proc msg
+ PID=%PID%
+ irc_talk_to_chl %PID%$1 $2-
+end proc
+proc say
+ PID=%PID%
+ irc_talk $1-
+end proc
+proc query
+ irc_createprivate $1
+end proc
+proc reconnect
+ irc_netstop
+ irc_connect
+end proc
+proc server
+ irc_netstop
+ irc_connectto $1 $2
+end proc
+proc close
+ irc_netstop
+end proc
+proc connect
+ irc_netconnect
+end proc
+proc j
+ PID=%PID%
+ /join $1-
+end proc
+proc p
+ PID=%PID%
+ /part $1
+end proc

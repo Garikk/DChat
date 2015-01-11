@@ -1,0 +1,9 @@
+/#--------------
+/# DChat IRC
+/# Color Schemes
+/#--------------
+/# DO NOT MODIFY THIS FILE
+PID=%PID%
+irc_addcolorscheme Default,6,4,5,2,3,3,3,3,3,3,1,5,7,6,1,3,2,3,5,1
+irc_addcolorscheme Изменено,6,4,5,2,3,3,3,3,3,3,2,5,7,6,1,3,2,3,5,1
+irc_addcolorscheme PC Theme,6,4,5,2,3,3,3,3,3,3,2,5,7,6,1,3,2,3,5,1

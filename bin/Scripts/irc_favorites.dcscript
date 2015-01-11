@@ -1,0 +1,9 @@
+/#--------------
+/# DChat IRC
+/# Favorite Channels Control File
+/# !!! DO NOT MODIFY THIS FILE !!!!!
+/#--------------
+PID=%PID%
+irc_addfavchl #dmtalk [all] -sound -alarm 
+irc_addfavchl #dmitrov [ALL] -sound -alarm 
+irc_addfavchl #dctest [all] -autojoin 

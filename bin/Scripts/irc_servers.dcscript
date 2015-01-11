@@ -1,0 +1,7 @@
+/#--------------
+/# DChat IRC
+/# IRC Servers List
+/#--------------
+/# USAGE: irc_addserver Network : Descr : Addr : Ports : Password
+PID=%PID%
+irc_addserver dalnet(ru) | dzfs | irc.pereslavl.ru | 6667

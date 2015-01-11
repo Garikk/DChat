@@ -1,0 +1,9 @@
+/# freza.net 2005
+/# Комманды указанные в этом файле будут автоматически выполнены при подключении
+PID=%PID%
+
+irc_initcurrentawaymode
+
+/#  ---
+
+irc_execperformscript

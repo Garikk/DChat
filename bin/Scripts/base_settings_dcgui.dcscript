@@ -1,0 +1,24 @@
+/# DZFS.net 2004
+/# DChat Project
+/# --------------------------------
+/# Standard Settings GUI Interface
+/# --------------------------------
+/# Created by Garikk
+/# --------------------------------
+/# DO NOT MODIFY THIS FILE!!
+/# --------------------------------
+/# ВНИМАНИЕ! этот файл редактируется программой, НЕ ИЗМЕНЯЙТЕ этот файл, поскольку это может привести к частичной неработоспособности программы
+
+dcse_blocknodirectcall
+PID=%PID%
+proc settingswindowshow
+ /base dcb_dcgui_addsettingspanel %PID% dcb_hotkeypnl
+/# /base dcb_dcgui_addsettingspanel %PID% dcb_pluginspnl
+
+/loadblock /base dcb_createsettingstree
+ Общие:/#
+/# .Расширения:dcb_pluginspnl
+ .Общий интерфейс:dcb_hotkeypnl
+/endblock
+end proc
+ 

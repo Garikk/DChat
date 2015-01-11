@@ -1,0 +1,100 @@
+/#--------------
+/# DChat IRC
+/# User Modes
+/# Будте осторожны с редактированием этого файла
+/# Не удаляйте режим АКТИВЕН, это может привести к дестабилизации программы
+/#--------------
+proc irc_mod_act
+PID=%PID%
+irc_getcurrentusermode irc_mod_act : dcse_haltscript
+irc_setumodesettings 1 1
+irc_setumodeprivact irc_mod_act_priv
+irc_initmode_g %procname%
+if irc_altnickisset false : /nick %usrnick_%
+if irc_altnickisset true : /nick %usrnick_a%
+/away
+end proc
+
+
+proc irc_mod_act_priv
+ /# ничего, можно приветствие написать
+end proc
+
+
+proc irc_mod_wrk
+PID=%PID%
+if irc_modeautoset false : irc_askmodecomment %procname%
+if irc_selmodehalt true : dcse_haltscript
+irc_setumodesettings 0 0
+irc_setumodeprivact irc_mod_wrk_priv
+irc_initmode_g %procname%
+ /nick %usrnick_%_Busy
+/away %currentmodecomment%
+end proc
+
+
+proc irc_mod_wrk_priv
+  /privmsg $1:Извините, я сейчас занят (%currentmodecomment%), как только освобожусь, отвечу.
+end proc
+
+
+proc irc_mod_awy
+PID=%PID%
+if irc_modeautoset false : irc_askmodecomment %procname%
+if irc_selmodehalt true : dcse_haltscript
+irc_setumodesettings 1 1
+irc_setumodeprivact irc_mod_wrk_priv
+irc_initmode_g %procname%
+ /nick %usrnick_%_Away
+/away %currentmodecomment%
+end proc
+
+
+proc irc_mod_wrk_priv
+  /privmsg $1:Извините, я сейчас занят (%currentmodecomment%), как только освобожусь, отвечу.
+end proc
+
+
+proc irc_mod_off
+PID=%PID%
+if irc_modeautoset false : irc_askmodecomment %procname%
+if irc_selmodehalt true : dcse_haltscript
+irc_setumodesettings 0 0
+irc_setumodeprivact irc_mod_off_priv
+irc_initmode_g %procname%
+ /nick %usrnick_%_Off
+/away %currentmodecomment%
+end proc
+
+
+proc irc_mod_off_priv
+  /privmsg $1 :Извините, я сейчас нехочу ни с кем разговаривать (%currentmodecomment%).
+end proc
+
+
+proc irc_mod_ply
+PID=%PID%
+if irc_modeautoset false : irc_askmodecomment %procname%
+if irc_selmodehalt true : dcse_haltscript
+irc_setumodesettings 0 0
+irc_setumodeprivact irc_mod_ply_priv
+irc_initmode_g %procname%
+ /nick %usrnick_%_Играю
+/away %currentmodecomment%
+end proc
+
+
+proc irc_mod_ply_priv
+  /privmsg $1 :Извините, я сейчас играю (%currentmodecomment%), как только освобожусь, отвечу.
+end proc
+
+
+proc AddModes
+irc_addumode Активен:irc_mod_act:CtrlS
+irc_addumode Занят:irc_mod_wrk:CtrlA
+irc_addumode Ушёл:irc_mod_awy:CtrlD
+irc_addumode Отключен:irc_mod_off:CtrlF
+irc_addumode Игровой:irc_mod_ply:CtrlG
+irc_activateumodesinterface
+irc_initlastmode
+end proc
